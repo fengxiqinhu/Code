@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 D:/code/markdown__note/note/工作环境搭建/git配置与初步使用.md
 # git安装、配置与初步使用  
 
 > 参考[廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/896043488029600)
@@ -40,5 +41,18 @@ $ git config --list
 #### 开始配置  
 1. 创建版本库（仓库）。选择一个空的目录，并且不含中文。
 2. 初始化，将该目录交于git管理，作为一个版本库。`$ git init`
-3. 
+3. 暂存修改：`git add filename`
+4. 提交修改：`git commit -m "描述"`
+5. 查看git状态：`git status`
+6. 查看提交历史：`git log`or`git log --pretty=oneline`
+7. 查看命令历史：`git reflog`
+8. 从暂存区撤回修改：`git reset head filename`
+9. 撤回到最后一次提交或添加的状态：`git checkout -- filename`
+10. 回滚到历史提交：`git reset --hard head^`（`^`上一次，`^^`上上一次，以此类推，或者`~100`代表回滚到前100次提交。回滚到未来，需查询命令历史（见7），获取文件id）or`git reset --hard file_id`
+11. 查看分支：`git branch`
+12. 创建分支：`git branch branchname`
+13. 创建并切换到该分支：`git checkout -b branchname` or `git switch branchname`
+14. 切换分支：`git checkout branchname` or `git switch branchname`
+15. 合并某分支到当前分支：`git merge branchname`
+16. 
 ![](_v_images/20200511151551161_11929.png)
